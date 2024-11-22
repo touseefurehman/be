@@ -1,0 +1,98 @@
+{% extends 'base/base_admin.html' %}
+{% load static %}  
+{% block title %}Footer Settings{% endblock %}
+{% block content %}
+
+
+        <main class="mainTags">
+            <!-- Product section -->
+            <div class="main_section m-3 ">
+                <div class="d-flex justify-content-between align-items-center">
+
+                <h2>Products</h2>
+                <div class="single_link ">
+                    <a href="{% url 'admin_product' %}">Add new</a>
+                </div>
+                </div>
+
+                <div class="filter_items_container">
+                    <div class="filter_title">
+                        <p>
+                            Filter By:
+                        </p>
+                    </div>
+                    <div class="filter_items">
+                        <!-- Product section  -->
+                        <div class="category_section_items my-2">
+                            <div class="category_section_item">
+                                <h3>Categories</h3>
+                                 <select class="form-select formSelect" aria-label="Default select example">
+                            <option selected>- - -</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                            </div>
+                            <form>
+                                <div class="products_container_input form-group mb-0">
+                                    <label for="exampleInputPassword1" class="form-label">Stock</label>
+                                    <input type="text" class="form-control product_2_input" id="exampleInputPassword1" placeholder="0">
+                                </div>
+                            </form>
+                            <div class="category_section_item">
+                                <h3>Filter Tags</h3>
+                                 <select class="form-select formSelect" aria-label="Default select example">
+                            <option selected>- - -</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                            </div>
+                            <div class="category_section_item">
+                                <h3>Simple Products</h3>
+                                 <select class="form-select formSelect" aria-label="Default select example">
+                            <option selected>- - -</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>                           
+                <!-- Product section 2  -->
+                <div class="product_section_2 my-4">
+                    <div class="parent-container-admin">
+                        <div class="child-admin">
+                            <label class="filterLabel">
+                                <input type="checkbox" />
+                            </label>
+                        </div>
+                        
+                        <div class="child_admin_desc">
+                            <div class="image_contanear">
+                                <img src="" alt="">
+                            </div>
+                            <div class="detail_containaer">
+                                <p>Prodeuct name</p>
+                                <p>Stock : XX </p>
+                                <p>Category</p>
+                                <p>Filter tag</p>
+                            </div>
+                        </div>
+
+                        <div class="child-admin dubliCol" style="border-left: 1px solid #000;">
+                            <p>Duplicate</p>
+                        </div>
+
+                        <div class="child-admin dubliCol" style="border-right: none;">
+                            <p>Edit</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+
+{% endblock %}

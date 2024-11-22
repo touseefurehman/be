@@ -1,0 +1,94 @@
+{% extends 'base/base_admin.html' %}
+{% load static %}  
+{% block title %}About us{% endblock %}
+{% block content %}
+
+
+
+
+        <main class="mainTags">
+            <!-- Category section -->
+            <div class="main_section m-3">
+                <div class="title_container">
+                    <h2 class="mainTitle">About Us</h2>
+                </div>
+                    <div class="category_title_links">
+                        <h1 class="mt-sm-2 mt-0 mainTitle">Scrolling Image / Video</h1>
+                        <div class="single_link">
+                            <a href="#">Add new</a>
+                        </div>
+                    </div>
+                <div class="link_scrolling_title">
+                    <div class="two_links mt-3">
+                        <p class="text-dark">File</p>
+                        <p class="text-dark">Link</p>
+                    </div>
+                    <div class="one_single_link">
+                        <p class="text-dark">Order</p>
+                    </div>
+                </div>
+                <!-- About us upload file section -->
+                <div class="parent_container_about_us">
+                    <div class="about_upload_file_sec_1">
+                        <div class="child_about_us">
+                            <label for="upload-photo">Insert file</label>
+                            <input type="file" name="photo" id="upload-photo" />
+                        </div>
+                    </div>
+                    <div class="form-group about_us_input">
+                        <input type="text" class="form-control" id="inputAddress" style="border: none !important;">
+                      </div>
+                    <div class="about_upload_file_sec_2">
+                        <div class="child_faqs about_us_para" style="border-left: 1px solid #000; border-right: 1px solid #000;">
+                            <p>0</p>
+                        </div>
+                        <div class="child_about_us child_faqs" style="border: none;">
+                            <p>Delete</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Description section  -->
+                <div class="addmin_product_descripton_section my-sm-4 my-2 pt-sm-5 pt-4">  
+                    <div class="title_container">
+                    <h1>Texts</h1>
+                </div>
+                    <textarea id="editor"></textarea>
+                </div>
+        </main>
+    </div>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+
+
+
+
+    
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+

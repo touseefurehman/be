@@ -1,0 +1,126 @@
+{% extends 'base/base_admin.html' %}
+{% load static %}  
+{% block title %}admin{% endblock %}
+{% block content %}
+
+
+
+
+<body class="mainBody">
+    <!-- Page main container -->
+  
+        <main class="mainTags">
+            <!-- Category section -->
+            <div class="main_section m-3">
+                <h2 class="mainTitle">Category</h2>
+                <div class="category_title_link">
+                    <div class="tow_link">
+                        <p>Feature on home</p>
+                        <p>Category name</p>
+                    </div>
+                    <div class="single_link">
+                        <a href="#" id="toggleBtn">Add new</a>
+
+                    </div>
+             
+                </div>
+                <div id="newDiv"  style="display: none;" class="pt-5">
+                    <form id="newForm" method="POST">
+                        {% csrf_token %}
+
+
+                        
+
+
+
+
+
+
+
+
+
+                        <div class="mb-3">
+                            <div style="border-radius: 12px;border: 1px solid black; display: flex;">
+                                <div class="form-check mb-3">
+                                    <input 
+                                        type="checkbox" 
+                                        id="home_feature" 
+                                        name="home_feature" 
+                                        class="form-check-input">
+                                </div>
+
+                                <div class="">
+
+                           <input type="text"id="category" name="category" class="form-control" 
+                              placeholder="Enter category" 
+                                required>
+
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- Home Feature Checkbox -->
+                    
+            
+
+
+
+
+
+                        
+                        <button class="mt-2 p-1" style="border-radius: 5px;" type="submit" id="saveBtn">Save</button>
+                    </form>
+                    
+                </div>
+                <script>
+                    document.getElementById('toggleBtn').addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent default anchor behavior
+                    
+                        const newDiv = document.getElementById('newDiv');
+                        const button = event.target;
+                    
+                        if (newDiv.style.display === 'none') {
+                            newDiv.style.display = 'block'; // Show the new div
+                            button.textContent = 'Add new';    // Change button text to 'Save'
+                        } else {
+                            // If Save is clicked, submit the form via POST (Django form handles the CSRF token)
+                            const form = document.getElementById('newForm');
+                            form.submit(); // Submit the form
+                        }
+                    });
+                    
+                </script>
+                {% for cat in categories %}
+
+                <div class="category_input_fields mt-sm-3 mt-2">
+                    <div class="parent_container_category_page">
+                        <div class="child_category_page w-25">
+                            <label class="filterLabel">
+                                <input type="checkbox" name="home_feature" {% if cat.feature_on_home %}checked{% endif %} />
+                            </label>                        </div>
+                        <div class="child_category_page w-75" >
+                            <p>{{cat.category_name}}</p>
+                        </div>
+                        
+                        <div class="child_category_page del_cate">
+                            <a href="#" class="text-dark">Delete</a>
+                        </div>
+                    </div>
+
+                </div>
+         
+           
+                         
+                    {% endfor %}
+
+       
+                
+                <!-- Residential use section -->
+            
+            </div>
+        </main>
+    </div>
+
+
+    
+    {% endblock %}

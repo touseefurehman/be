@@ -1,0 +1,70 @@
+{% extends 'base/base_admin.html' %}
+{% load static %}  
+{% block title %}Filter tags{% endblock %}
+{% block content %}
+
+<body class="mainBody">
+    <!-- Page main container -->
+
+        <main class="mainTags">
+            <!-- Category section -->
+            <div class="main_section m-3">
+                <div class="title_container">
+                    <h2 class="mainTitle">Filter Tags</h2>
+                    <div class="single_link">
+                        <a href="#">Add new</a>
+                    </div>
+                </div>
+                <!-- <div class="filter_item_inputs mt-5">
+                    <div class="filter_item_input">
+                        <p class="pt-3">On Sale</p>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                    <div class="filter_item_input">
+                        <p class="pt-3">On Sale</p>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                    <div class="filter_item_input">
+                        <p class="pt-3">On Sale</p>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                </div> -->
+
+
+                <div class="category_input_fields">
+                    <div class="parent_container_category_page">
+                        <div class="child_category_page w-75">
+                            <p>On sale</p>
+                        </div>
+                        <div class="child_category_page del_cate">
+                            <a href="#" class="text-dark">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category_input_fields">
+                    <div class="parent_container_category_page">
+                        <div class="child_category_page w-75">
+                            <p>Cordless</p>
+                        </div>
+                        <div class="child_category_page del_cate">
+                            <a href="#" class="text-dark">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category_input_fields">
+                    <div class="parent_container_category_page">
+                        <div class="child_category_page w-75">
+                            <p>Hot Seller</p>
+                        </div>
+                        <div class="child_category_page del_cate">
+                            <a href="#" class="text-dark">Delete</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+    {% endblock %}

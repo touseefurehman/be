@@ -1,0 +1,66 @@
+{% load static %}
+
+
+<footer>
+  
+
+<div class="footerSection">
+    <div class="layout-container">
+        <div class="row">
+            <div class="col-lg-6 col-md-5">
+                <div class="footer_logo">
+                    <a href="./index.html">
+                        <img src=" {% static "images/logo.svg" %} " alt="logo">
+
+                    </a>
+                    <p>
+                        {{ footer_data.about_us }}
+
+                    </p>
+                    <p class="mt-4 d-md-block d-none">
+                        © 2024 BEGEN pte. Ltd. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-3">
+                <div class="footerLinks">
+                    <h6>Contact Us</h6>
+                    <p>
+                        {{ footer_data.contact_number }}
+                    </p>
+                    <p>
+                        {{ footer_data.contact_information }}
+                    </p>
+                    <a href="#" style="text-decoration: underline;">
+                        {{ footer_data.contact_email }}
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 mt-3">
+                <div class="footerLinks">
+                    <h6>Showroom</h6>
+                    <p>
+                        {{ footer_data.showroom_address }}
+
+                    </p>
+                </div>
+                <div class="footerLinks mt-3">
+                    <h6>About Us</h6>
+                    <a href="#">
+                        About begen
+                    </a>
+                    <a href="#">
+                        FAQS
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer_logo d-md-none d-block">
+            <p class="mt-4">
+                © 2024 BEGEN pte. Ltd. All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,356 @@
+{% extends 'base/base_admin.html' %}
+{% load static %}  
+{% block title %}About us{% endblock %}
+{% block content %}
+
+
+
+<body class="mainBody">
+    <!-- Page main container -->
+   
+        <main class="mainTags">
+            <div class="main_section_admin_product">
+                <ul class="admin_product_items">
+                    <li class="admin_item"><a href="#">Delete</a></li>
+                    <li class="admin_item"><a href="#">Save</a></li>
+                </ul>
+            </div>
+            <div class="content_section">
+                <form action="">
+                    <div class="form-row admin_product">
+                        <div class="form-group col-md-10">
+                            <label for="inputCity">Product Name</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Stock</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                </form>
+                                
+                <!-- Product image section -->
+                <div class="admin_product_wrapper">
+                    <div class="title_container">
+                        <h3>Product Image</h3>
+                        <label for="upload-image" class="add-btn">Add New</label>
+                        <input type="file" name="photo" id="upload-image" accept="image/*" hidden />
+                    </div>
+                    <!-- Swiper for images -->
+                    <div class="swiper mySwiper image-swiper">
+                        <div class="swiper-wrapper" id="image-swiper-wrapper">
+                            <!-- Image slides will be dynamically added here -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <!-- Product video section -->
+                <div class="admin_product_wrapper">
+                    <div class="title_container">
+                        <h3>Product Video</h3>
+                        <label for="upload-video" class="add-btn">Add New</label>
+                        <input type="file" name="video" id="upload-video" accept="video/*" hidden />
+                    </div>
+                    <!-- Swiper for videos -->
+                    <div class="swiper mySwiper video-swiper">
+                        <div class="swiper-wrapper" id="video-swiper-wrapper">
+                            <!-- Video slides will be dynamically added here -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+
+                <!-- What's Include section  -->
+                <div class="whats_include_section my-4">
+                    <div class="title_container">
+                        <h3 class="mb-sm-3 mb-2">What's Include</h3>
+                    </div>
+                    <select class="form-select formSelect" aria-label="Default select example">
+                        <option selected>- - -</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+
+                <!-- Description section  -->
+                <div class="addmin_product_descripton_section my-4">
+                    <div class="title_container">
+                        <h3 class="mb-sm-3 mb-2">Description</h3>
+                    </div>
+                    <textarea name="editor1" id="editor1" rows="5" cols="40"></textarea>
+                </div>
+
+                <!-- Key feature section  -->
+                <div class="admin_product_wrapper">
+                    <div class="title_container">
+                        <h3 class="mb-sm-3 mb-2">Key Featurs</h3>
+                        <label for="upload-photo">Add</label>
+                        <input type="file" name="photo" id="upload-photo" />
+                    </div>
+                    <div class="parent-container">
+                        <div class="child image_section" style="border-right: none;">
+                            <div class="image_upload_section">
+                                <label for="upload-photo">Upload Image</label>
+                                <input type="file" name="photo" id="upload-photo" />
+                            </div>
+                        </div>
+                        <div class="form_admin_product_section_2">
+                            <div class="child">
+                                <form action="">
+                                    <div class="form-group mt-3">
+                                        <label for="inputAddress">Feature Name</label>
+                                        <input type="text" class="form-control" id="inputAddress">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAddress2">Description</label>
+                                        <input type="text" class="form-control" id="inputAddress2">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- .specification section  -->
+                <div class="addmin_product_descripton_section my-4">
+                    <div class="title_container">
+                        <h3 class="mb-sm-3 mb-2">Specification</h3>
+                    </div>
+                    <textarea name="editor2" id="editor2" rows="5" cols="40"></textarea>
+                </div>
+
+                <!-- Ebroucher section  -->
+                <div class="admin_product_wrapper">
+                    <div class="title_container">
+                        <h3 class="mb-sm-3 mb-2">E-bounchers</h3>
+                        <label for="upload-photo">Add</label>
+                        <input type="file" name="photo" id="upload-photo" />
+                    </div>
+                    <div class="parent-container">
+                        <div class="child image_section" style="border-right: none;">
+                            <div class="image_upload_section">
+                                <label for="upload-photo">Upload Image</label>
+                                <input type="file" name="photo" id="upload-photo" />
+                            </div>
+
+                        </div>
+                        <div class="form_admin_product_section_2">
+                            <div class="child">
+
+                                <form action="">
+                                    <div class="form-group mt-3">
+                                        <label for="inputAddress">Feature Name</label>
+                                        <input type="text" class="form-control" id="inputAddress">
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Application area  -->
+                <div class="application_area_section my-4">
+                    <div class="title_container">
+                        <h3 class="mb-sm-3 mb-2">Application area</h3>
+                    </div>
+                    <textarea name="editor3" id="editor3" rows="5" cols="40"></textarea>
+                </div>
+                <!-- Accessories section -->
+                <div class="whats_include_section my-4">
+                    <div class="title_container">
+                        <h3 class="mb-sm-3 mb-2">Accessories and parts</h3>
+                    </div>
+                    <select class="form-select formSelect" aria-label="Default select example">
+                        <option selected>- - -</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+
+                <!-- Warrenty section  -->
+                <div class="addmin_product_descripton_section my-4">
+                    <div class="title_container">
+                        <h3 class="mb-sm-3 mb-2">Warranty</h3>
+                    </div>
+                    <textarea name="editor4" id="editor4" rows="5" cols="40"></textarea>
+                </div>
+
+                <!-- Category section  -->
+                <div class="category_section_items my-4">
+                    <div class="category_section_item">
+                        <h3>Categories</h3>
+                        <select class="form-select formSelect" aria-label="Default select example">
+                            <option selected>- - -</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="category_section_item">
+                        <h3>Filter Tags(s)</h3>
+                        <select class="form-select formSelect" aria-label="Default select example">
+                            <option selected>- - -</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="category_section_item">
+                        <h3>Similer Products</h3>
+                        <select class="form-select formSelect" aria-label="Default select example">
+                            <option selected>- - -</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{% static "js/index.js" %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <!-- Initialize CKEditor -->
+    <script>
+        CKEDITOR.replace('editor1');
+        CKEDITOR.replace('editor2');
+        CKEDITOR.replace('editor3');
+        CKEDITOR.replace('editor4');
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const imageUploadInput = document.getElementById("upload-image");
+    const videoUploadInput = document.getElementById("upload-video");
+    const imageSwiperWrapper = document.getElementById("image-swiper-wrapper");
+    const videoSwiperWrapper = document.getElementById("video-swiper-wrapper");
+
+    let imageSwiper;
+    let videoSwiper;
+
+    // Initialize Swipers
+    const initializeImageSwiper = () => {
+        if (!imageSwiper) {
+            imageSwiper = new Swiper(".image-swiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                loop: true,
+                autoplay: {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
+                },
+            });
+        }
+    };
+
+    const initializeVideoSwiper = () => {
+        if (!videoSwiper) {
+            videoSwiper = new Swiper(".video-swiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                loop: true,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
+                },
+            });
+        }
+    };
+
+    // Handle image uploads
+    imageUploadInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const newSlide = document.createElement("div");
+                newSlide.classList.add("swiper-slide");
+                newSlide.innerHTML = `
+                    <div class="insert_image">
+                        <img src="${e.target.result}" alt="Uploaded Image" />
+                    </div>
+                `;
+                imageSwiperWrapper.appendChild(newSlide);
+
+                initializeImageSwiper();
+                imageSwiper.update();
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Handle video uploads
+    videoUploadInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const newSlide = document.createElement("div");
+                newSlide.classList.add("swiper-slide");
+                newSlide.innerHTML = `
+                    <div class="insert_video">
+                        <video controls>
+                            <source src="${e.target.result}" type="${file.type}" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                `;
+                videoSwiperWrapper.appendChild(newSlide);
+
+                initializeVideoSwiper();
+                videoSwiper.update();
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    initializeImageSwiper();
+    initializeVideoSwiper();
+});
+
+
+    </script>
+  {% endblock %}

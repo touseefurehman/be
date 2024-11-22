@@ -1,0 +1,73 @@
+{% extends 'base/base_admin.html' %}
+{% load static %}  
+{% block title %}Footer Settings{% endblock %}
+{% block content %}
+{% if footer_data %}
+
+<body class="mainBody">
+        <main class="mainTags">
+            <div class="main_section m-3">
+                <h2 class="mainTitle">Settings</h2>
+                <div class="form_container pt-3">
+                    <h3 class="subTitle">Footer Setting</h3>
+                        <div class='d-flex justify-content-end'>
+                        <button type="submit" style="background-color: white;border: 0ch;"> 
+
+
+                            <div class="single_link">
+                            <a href="{% url 'footer_edit' %}"> Edit </a>
+                        </div>
+
+                         </button>
+                    </div>
+                        <div class="form-group">
+                            <label for="inputAddress">About us</label>
+                            <input type="text" name="about_us"  value="    {{ footer_data.about_us }}" class="form-control" id="inputAddress" readonly>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Contact Email Address</label>
+                                <input type="contact" value="    {{ footer_data.contact_number }}" name="contact_email" class="form-control" id="inputPassword4" readonly>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Contact Email Address</label>
+                                <input type="email" name="contact_email" class="form-control" id="inputPassword4 " value="    {{ footer_data.contact_email }}" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Contact Information</label>
+                            <input type="text" value="    {{ footer_data.contact_information }}" name="contact_information" class="form-control" id="inputAddress" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress2">Showroom Address</label>
+                            <input type="text" value="    {{ footer_data.showroom_address }}" name="showroom_address" class="form-control" id="inputAddress2" readonly>
+                        </div>
+                        <div class="general_settings mt-sm-5 mt-4">
+                            <h3 class="subTitle">General Settings</h3>
+                            <div class="form-group mb-0 mt-4">
+                                <label class="mb-0">Company logo</label>
+                            </div>
+                            <div class="insert_image">
+                                <label for="upload-photo">Insert image</label>
+                                <input type="file" name="company_logo" id="upload-photo" />
+                            </div>
+                        </div>
+
+                        <div class="website_link_email">
+                            <h3 class="subTitle">Website linked email addresses</h3>
+                            <div class="form-group mt-2">
+                                <input type="text" class="form-control" id="inputAddress"
+                                    value="    {{ footer_data.website_linked_email_addresses }}" readonly>
+                                <p class="mt-2">Use comma separated values to enter more than 1 email addresses</p>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    {% endif %}
+
+    {% endblock %}

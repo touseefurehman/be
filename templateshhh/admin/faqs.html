@@ -1,0 +1,98 @@
+{% extends 'base/base_admin.html' %}
+{% load static %}  
+{% block title %}FAQS{% endblock %}
+{% block content %}
+
+
+<body class="mainBody">
+    <!-- Page main container -->
+   
+        <main class="mainTags">
+         
+
+            <!-- Category section -->
+            <div class="main_section m-3">
+                <div class="title_container">
+                    <h2 class="mainTitle">FAQs</h2>
+                    <div class="single_link">
+                        <a id="toggleBtn" type="submit" href="#">Add new</a>
+                    </div>
+                </div>
+                <div class="category_title_link px-0">
+                    <div class="tow_link">
+                        <p class="subTitle">Frequently asked question</p>
+                        <!-- <a href="#">Category name</a> -->
+                    </div>
+
+                    <div class="single_link">
+                        <a href="#">Orders</a>
+                    </div>
+                </div>
+
+
+<script>
+    document.getElementById('toggleBtn').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        
+        const newDiv = document.getElementById('newDiv');
+        const button = event.target;
+    
+        if (newDiv.style.display === 'none') {
+            newDiv.style.display = 'block'; // Show the new div
+            button.textContent = 'Save';    // Change button text to 'Save'
+        } else {
+            newDiv.style.display = 'none'; // Hide the new div
+            button.textContent = 'Add new'; // Change button text back to 'Add new'
+        }
+    });
+    
+</script>
+<form method="POST">
+    {% csrf_token %}
+                <div id="newDiv" style="display: none;">
+
+                    <label for="question">Question:</label>
+                    <input type="text" id="question" name="question" placeholder="Enter your question" required>
+                    
+                    <label for="answer">Answer:</label>
+                    <input type="text" id="answer" name="answer" placeholder="Enter your question" required>
+                    
+                    <button type="submit" class="btn">save</button>
+                </div>
+            </form>
+
+
+            {% for faqs_admin in faqs_admin %}
+            
+            
+            
+
+                <div class="filter_item_inputs_faqs my-4">
+                    <div class="parent_container_faqs">
+                        <div class="faqs_sec_1">
+                            <div class="child_faqs">
+                                <p class="faq_title">{{faqs_admin.question}}</p>
+                                <p class="mt-4">{{faqs_admin.answer}}</p>
+                            </div>
+                        </div>
+                        <div class="faqs_sec_2_items">
+                            <div class="child_faqs childRight p-4">
+                                <p></p>
+                            </div>
+                            <div class="child_faqs childRight del_feq" style="border-right: none !important;">
+                                <p>Delete</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+           
+
+        </main>
+    </div>
+
+
+
+   
+    {% endblock %}

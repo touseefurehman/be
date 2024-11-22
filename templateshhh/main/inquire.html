@@ -1,0 +1,204 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Begen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
+  <!-- bootstrap icon link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <header class="headerSection">
+      <a href="./index.html">
+        <img src="./assets/images/logo.svg" alt="logo">
+      </a>
+      <img src="./assets/images/Group 903.svg" alt="" class="editIcon">
+    </header>
+
+    <div class="row">
+        <div class="col-xl-5 col-lg-12 mt-4">
+            <div class="includedDetail">
+                <h1>What’s included</h1>
+                <div class="includedCard">
+                    <div class="imgCard">
+                        <img src="./assets/images/image 125.png" alt="">
+                    </div>
+                    <div class="d-flex flex-column justify-content-between">
+                        <div>
+                            <h3>Mattress Nozzle</h3>
+                            <p>Model Number: WD2 PLUS V-12/4/18/C <strong>(5 Pieces LEFT)</strong></p>
+                        </div>
+                        <p>
+                            <strong>View item</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="includedCard">
+                    <div class="imgCard">
+                        <img src="./assets/images/image 126.png" alt="">
+                    </div>
+                    <div class="d-flex flex-column justify-content-between">
+                        <div>
+                            <h3>Filter set</h3>
+                            <p>Model Number: WD2 PLUS V-12/4/18/C <strong>(5 Pieces LEFT)</strong></p>
+                        </div>
+                        <p>
+                            <strong>View item</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-5 col-lg-12 mt-sm-4 mt-3 m-2">
+            <form>
+                <div class="form-group">
+                    <label for="inputAddress">Name</label>
+                    <input type="text" class="form-control" id="inputAddress" >
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Company name</label>
+                    <input type="text" class="form-control" id="inputAddress">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email Address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                  </div>
+                  <div class="form-group">
+                    <div class="container mt-2">
+                        <div class="phone-input-container">
+                                <div class="form-group input_container">
+                                    <label for="inputAddress">Name</label>
+                                    <input type="text" class="form-control" id="inputAddress" >
+                         
+                                    <div class="select_container">
+                                        <select id="countryCode">
+                                            <option value="+92" selected>+92 (Pakistan)</option>
+                                            <option value="+1">+1 (USA)</option>
+                                            <option value="+44">+44 (UK)</option>
+                                            <option value="+91">+91 (India)</option>
+                                            <option value="+61">+61 (Australia)</option>
+                                        </select>
+                                    </div>       
+                                
+                                </div>
+
+
+                                
+                                
+                                
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      
+                    </form>
+                  </div>
+                  
+                  {% include "base/main/footer_main.html" %}
+    </div>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    // First Swiper initialization
+    const firstSwiper = new Swiper(".firstSwiper", {
+      pagination: {
+        el: ".firstSwiper .swiper-pagination",
+        clickable: true,
+      },
+      slidesPerView: 1,
+    });
+
+    // Second Swiper initialization
+    const secondSwiper = new Swiper(".secondSwiper", {
+      pagination: {
+        el: ".secondSwiper .swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 3000,  // Set autoplay delay to 3000ms (3 seconds)
+        disableOnInteraction: false, // Autoplay continues after user interactions
+      },
+      slidesPerView: 1,
+      spaceBetween: 15,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+
+    // Third Swiper initialization
+    const thirdSwiper = new Swiper(".thirdSwiper", {
+      pagination: {
+        el: ".thirdSwiper .swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 3500,  // Set autoplay delay to 5000ms (5 seconds)
+        disableOnInteraction: false, // Autoplay continues after user interactions
+      },
+      slidesPerView: 1,
+      spaceBetween: 15,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+
+
+    const countryCode = document.getElementById('countryCode');
+        const phoneNumber = document.getElementById('phoneNumber');
+
+        phoneNumber.addEventListener('input', () => {
+            console.log(`Full number: ${countryCode.value}${phoneNumber.value}`);
+        });
+
+  </script>
+</body>
+
+</html>

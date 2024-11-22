@@ -1,0 +1,305 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Begen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <!-- bootstrap icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <header class="headerSection">
+            <a href="./index.html">
+                <img src="{% static "images/logo.svg" %} " alt="logo">
+            </a>
+            <img src="{% static "images/Group 903.svg" %}  " alt="" class="editIcon">
+        </header>
+        <div class="layout-container">
+            <div class="productContainer">
+                <div class="filterSection">
+                    <h5>FILTER BY</h5>
+
+                    <h6>CATEGORY</h6>
+                    <label class="filterLabel">
+                        Vacuums
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        Mops
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        Detergents
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        Pressure Washersx
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        Robot Vacuumsx
+                        <input type="checkbox" />
+                    </label>
+                    <h6>Product Tags</h6>
+                    <label class="filterLabel">
+                        Best sellersx
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        Just released
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        On discount
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        Essentials
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        Cordless
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        Commercial Use
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        Residential Use
+                        <input type="checkbox" />
+                    </label>
+                    <label class="filterLabel">
+                        Automated
+                        <input type="checkbox" />
+                    </label>
+                </div>
+                <div class="products-section">
+                    <div class="main-title mt-0">
+                        <h1>Vacuums</h1>
+                    </div>
+                    <div class="row cardRow">
+                        <div class="col-xl-4 col-lg-6 mt-4">
+                            <a href="./productDetail.html">
+                                <div class="productCard">
+                                    <div class="productImageCard">
+                                        <img src="{% static "images/product1.svg" %}  " alt="">
+
+                                    </div>
+                                    <h6>
+                                        KARCHER WET & DRY VACUUM
+                                    </h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 mt-4">
+                            <a href="./productDetail.html">
+                                <div class="productCard">
+                                    <div class="productImageCard">
+                                        <img src="{% static "images/product2.svg" %}" alt="">
+                                    </div>
+                                    <h6>
+                                        BATTERY POWERED VACUUM CLEANER
+                                    </h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 mt-4">
+                            <a href="./productDetail.html">
+                                <div class="productCard">
+                                    <div class="productImageCard">
+                                        <img src="{% static "images/product3.svg" %}" alt="">
+                                    </div>
+                                    <h6>
+                                        WATER FILTER VACUUM CLEANER
+                                    </h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 mt-4">
+                            <a href="./productDetail.html">
+                                <div class="productCard">
+                                    <div class="productImageCard">
+                                        <!-- <img src="./assets/images/product3.svg" alt=""> -->
+                                    </div>
+                                    <h6>
+                                        PRODUCT NAME
+                                    </h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 mt-4">
+                            <a href="./productDetail.html">
+                                <div class="productCard">
+                                    <div class="productImageCard">
+                                        <!-- <img src="./assets/images/product3.svg" alt=""> -->
+                                    </div>
+                                    <h6>
+                                        PRODUCT NAME
+                                    </h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 mt-4">
+                            <a href="./productDetail.html">
+                                <div class="productCard">
+                                    <div class="productImageCard">
+                                        <!-- <img src="./assets/images/product3.svg" alt=""> -->
+                                    </div>
+                                    <h6>
+                                        PRODUCT NAME
+                                    </h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 mt-4">
+                            <a href="./productDetail.html">
+                                <div class="productCard">
+                                    <div class="productImageCard">
+                                        <!-- <img src="./assets/images/product3.svg" alt=""> -->
+                                    </div>
+                                    <h6>
+                                        PRODUCT NAME
+                                    </h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 mt-4">
+                            <a href="./productDetail.html">
+                                <div class="productCard">
+                                    <div class="productImageCard">
+                                        <!-- <img src="./assets/images/product3.svg" alt=""> -->
+                                    </div>
+                                    <h6>
+                                        PRODUCT NAME
+                                    </h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 mt-4">
+                            <a href="./productDetail.html">
+                                <div class="productCard">
+                                    <div class="productImageCard">
+                                        <!-- <img src="./assets/images/product3.svg" alt=""> -->
+                                    </div>
+                                    <h6>
+                                        PRODUCT NAME
+                                    </h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navigateDiv">
+                        <a href="#">
+                            Page 01 <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+    {% include "base/main/footer_main.html" %}
+
+
+
+
+    
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        // First Swiper initialization
+        const firstSwiper = new Swiper(".firstSwiper", {
+            pagination: {
+                el: ".firstSwiper .swiper-pagination",
+                clickable: true,
+            },
+            slidesPerView: 1,
+        });
+
+        // Second Swiper initialization
+        const secondSwiper = new Swiper(".secondSwiper", {
+            pagination: {
+                el: ".secondSwiper .swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,  // Set autoplay delay to 3000ms (3 seconds)
+                disableOnInteraction: false, // Autoplay continues after user interactions
+            },
+            slidesPerView: 1,
+            spaceBetween: 15,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+            },
+        });
+
+        // Third Swiper initialization
+        const thirdSwiper = new Swiper(".thirdSwiper", {
+            pagination: {
+                el: ".thirdSwiper .swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 3500,  // Set autoplay delay to 5000ms (5 seconds)
+                disableOnInteraction: false, // Autoplay continues after user interactions
+            },
+            slidesPerView: 1,
+            spaceBetween: 15,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+            },
+        });
+
+    </script>
+</body>
+
+</html>

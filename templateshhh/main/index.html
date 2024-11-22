@@ -1,0 +1,385 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Begen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="{%static 'css/style.css'%}">
+  <!-- bootstrap icon link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <header class="headerSection">
+      <a href="{% url "home" %}">
+        <img src="{%static 'images/logo.svg'%}" alt="logo">
+      </a>
+      <img src="{%static 'images/Group 903.svg'%}" alt="" class="editIcon">
+    </header>
+    <div class="layout-container">
+      <div class="main-title">
+        <h1>SHOP 🛍️</h1>
+      </div>
+      <div class="buttonGroup">
+        <button type="button">MOPS</button>
+        <a href="./product.html">
+          <button type="button">VACUUMS</button>
+        </a>
+        <button type="button">Machine</button>
+      </div>
+      {% comment %} <div class="d-flex justify-content-end">
+        <button type="button" class="next_Btn">
+          Next Slide
+          <i class="bi bi-play-fill"></i>
+        </button>
+      </div> {% endcomment %}
+      {% comment %} <div class="video-container">
+        <img src="{% static "Screenshot 2024-11-01 at 5.08.36 PM 1.svg " %}" alt="" class="w-100">
+        <div class="play_btn">
+          <i class="bi bi-play-fill"></i>
+        </div>
+      </div> {% endcomment %}
+      <div class="main-title mt-sm-4 mt-2 mb-sm-4 mb-3 pt-3">
+        <h1>BEST SELLERS 👍</h1>
+        <button type="button" class="next_Btn my-0">
+          Next best
+          <i class="bi bi-play-fill"></i>
+        </button>
+      </div>
+      <div class="best_seller_section">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="slideCard">
+              <div class="swiper firstSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="{% static "image.svg" %}" alt="">
+                    <div class="play_btn">
+                      <i class="bi bi-play-fill"></i>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static "image (1).svg" %}" alt="">
+                    <div class="play_btn">
+                      <i class="bi bi-play-fill"></i>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static "image (2).svg" %}" alt="">
+                    <div class="play_btn">
+                      <i class="bi bi-play-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="sellerDetail">
+              <h1>KARCHER WET & DRY VACUUM</h1>
+              <h6>Model Number: WD2 PLUS V-12/4/18/C <strong>(5 Pieces LEFT)</strong></h6>
+              <h6 class="mt-3">Description</h6>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+              </p>
+              <div class="tabsSec">
+                <ul class="nav navPils nav-pills mb-3 " id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link navtabsLink nav1 active" id="pills-home-tab" data-bs-toggle="pill"
+                      data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                      aria-selected="true">Key Features</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link navtabsLink nav2" id="pills-profile-tab" data-bs-toggle="pill"
+                      data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                      aria-selected="false">What’s Included</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                    aria-labelledby="pills-home-tab" tabindex="0">
+                    <ul>
+                      <li>
+                        Vacuums Wet Surfaces
+                      </li>
+                      <li>
+                        Silent Mode
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    tabindex="0">
+                    <ul>
+                      <li>
+                        Mattress Nozzle
+                      </li>
+                      <li>
+                        Filter Set
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <a href="#">
+                <button type="button" class="learnMoreBtn">Learn More</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-title mt-sm-4 mt-2 mb-sm-4 mb-3 pt-3">
+        <h1>COMMERCIAL USE 🤙</h1>
+      </div>
+      <div class="useSwiperSection">
+        <!-- Swiper -->
+        <div class="swiper secondSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination useSwapPagination"></div>
+        </div>
+      </div>
+      <div class="main-title mt-sm-4 mt-2 mb-sm-4 mb-3 pt-3">
+        <h1>RESIDENTIAL USE 🤟</h1>
+      </div>
+      <div class="useSwiperSection">
+        <!-- Swiper -->
+        <div class="swiper thirdSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="useSwiperCard">
+                <img src="{% static 'images/Rectangle 326.png' %}" alt="">
+                <h6>PRODUCT NAME</h6>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination useSwapPagination"></div>
+        </div>
+      </div>
+    </div>
+
+
+    {% include "base/main/footer_main.html" %}
+
+{% comment %} 
+    <div class="footerSection">
+      <div class="layout-container">
+        <div class="row">
+          <div class="col-lg-6 col-md-5">
+            <div class="footer_logo">
+              <a href="./index.html">
+                <img src="{% static "images/logo.svg" %}" alt="logo">
+              </a>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book
+              </p>
+              <p class="mt-4 d-md-block d-none">
+                © 2024 BEGEN pte. Ltd. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-3">
+            <div class="footerLinks">
+              <h6>Contact Us</h6>
+              <p>
+                +65 XXXX XXX
+              </p>
+              <p>
+                Hotline Hours: Mon - Fri,10am - 6pm (except PH)
+              </p>
+              <a href="#" style="text-decoration: underline;">
+                Sales@begen.sg
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 mt-3">
+            <div class="footerLinks">
+              <h6>Showroom</h6>
+              <p>
+                Blk 13 Lor 8 Toa Payoh,
+                #07-03 Braddell Tech,
+                Singapore 319261
+              </p>
+            </div>
+            <div class="footerLinks mt-3">
+              <h6>About Us</h6>
+              <a href="#">
+                About begen
+              </a>
+              <a href="#">
+                FAQS
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer_logo d-md-none d-block">
+          <p class="mt-4">
+            © 2024 BEGEN pte. Ltd. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div> {% endcomment %}
+
+
+
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    // First Swiper initialization
+    const firstSwiper = new Swiper(".firstSwiper", {
+      pagination: {
+        el: ".firstSwiper .swiper-pagination",
+        clickable: true,
+      },
+      slidesPerView: 1,
+    });
+
+    // Second Swiper initialization
+    const secondSwiper = new Swiper(".secondSwiper", {
+      pagination: {
+        el: ".secondSwiper .swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 3000,  // Set autoplay delay to 3000ms (3 seconds)
+        disableOnInteraction: false, // Autoplay continues after user interactions
+      },
+      slidesPerView: 1,
+      spaceBetween: 15,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+
+    // Third Swiper initialization
+    const thirdSwiper = new Swiper(".thirdSwiper", {
+      pagination: {
+        el: ".thirdSwiper .swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 3500,  // Set autoplay delay to 5000ms (5 seconds)
+        disableOnInteraction: false, // Autoplay continues after user interactions
+      },
+      slidesPerView: 1,
+      spaceBetween: 15,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+
+  </script>
+</body>
+
+</html>
