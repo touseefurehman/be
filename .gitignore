@@ -1,0 +1,46 @@
+# Node.js
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+*.sqlite3
+media/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# JetBrains
+.idea/
+
+# Log files
+*.log
+
+# Environment variables
+.env
+*.env
+
+# Coverage files
+coverage/
+*.coveragerc
+*.tox
+
+# Dependency directories
+bower_components/
